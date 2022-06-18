@@ -23,6 +23,7 @@
 		3AD987B5285A396900C9C2DC /* CreateChallengeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD987B4285A396900C9C2DC /* CreateChallengeViewModel.swift */; };
 		3AD987B7285A3E8800C9C2DC /* DropdownItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD987B6285A3E8800C9C2DC /* DropdownItemProtocol.swift */; };
 		3AD987CB285E04E000C9C2DC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3AD987CA285E04E000C9C2DC /* GoogleService-Info.plist */; };
+		3AD987CE285E0E1400C9C2DC /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD987CD285E0E1400C9C2DC /* UserService.swift */; };
 		4D68548DFF742E7B2AC7A3A7 /* Pods_Increment_IncrementUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF23EDA4625A40BB1DB43DB3 /* Pods_Increment_IncrementUITests.framework */; };
 		F1DDF5E15CC2F310009D1884 /* Pods_IncrementTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95936C3AF501F2693D473A4B /* Pods_IncrementTests.framework */; };
 /* End PBXBuildFile section */
@@ -65,6 +66,7 @@
 		3AD987B4285A396900C9C2DC /* CreateChallengeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateChallengeViewModel.swift; sourceTree = "<group>"; };
 		3AD987B6285A3E8800C9C2DC /* DropdownItemProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownItemProtocol.swift; sourceTree = "<group>"; };
 		3AD987CA285E04E000C9C2DC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3AD987CD285E0E1400C9C2DC /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		5AC95695A1C752CBEB77A3CA /* Pods-Increment-IncrementUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Increment-IncrementUITests.release.xcconfig"; path = "Target Support Files/Pods-Increment-IncrementUITests/Pods-Increment-IncrementUITests.release.xcconfig"; sourceTree = "<group>"; };
 		95936C3AF501F2693D473A4B /* Pods_IncrementTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IncrementTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B901D3DBCF319D015CC49D81 /* Pods-Increment-IncrementUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Increment-IncrementUITests.debug.xcconfig"; path = "Target Support Files/Pods-Increment-IncrementUITests/Pods-Increment-IncrementUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 		3A33E8A0285636F9001FCE3C /* Increment */ = {
 			isa = PBXGroup;
 			children = (
+				3AD987CC285E0DF000C9C2DC /* Services */,
 				3AD987CA285E04E000C9C2DC /* GoogleService-Info.plist */,
 				3AD987B3285A394800C9C2DC /* ViewModels */,
 				3A33E8A1285636F9001FCE3C /* IncrementApp.swift */,
@@ -174,6 +177,14 @@
 				3AD987B6285A3E8800C9C2DC /* DropdownItemProtocol.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		3AD987CC285E0DF000C9C2DC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3AD987CD285E0E1400C9C2DC /* UserService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		3FF7BC4274BA34DC8DAA0E69 /* Pods */ = {
@@ -444,6 +455,7 @@
 				3AD987B7285A3E8800C9C2DC /* DropdownItemProtocol.swift in Sources */,
 				3A33E8CE28563F1F001FCE3C /* Color+Extension.swift in Sources */,
 				3AD987B5285A396900C9C2DC /* CreateChallengeViewModel.swift in Sources */,
+				3AD987CE285E0E1400C9C2DC /* UserService.swift in Sources */,
 				3A0993932858EA6400D4A6B0 /* RemindView.swift in Sources */,
 				3A09938F2858D10D00D4A6B0 /* CreateView.swift in Sources */,
 				3A0993912858D19000D4A6B0 /* DropdownView.swift in Sources */,

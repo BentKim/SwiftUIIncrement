@@ -6,6 +6,9 @@
 //
 
 import SwiftUI
+import Combine
+
+typealias UserId = String
 
 final class CreateChallengeViewModel: ObservableObject{
     @Published var dropdowns: [ChallengePartViewModel] = [
@@ -15,8 +18,12 @@ final class CreateChallengeViewModel: ObservableObject{
         .init(type: .length)
     ]
     
+    private let userService: UserServiceProtocol
+    private var cancellables: [AnyCancellable]=[]
+    
     enum Action {
         case selectOption(index: Int)
+        case createChallenge
     }
     
     var hasSelectedDropdown: Bool{
@@ -34,6 +41,10 @@ final class CreateChallengeViewModel: ObservableObject{
         return dropdowns[selectedDropdownIndex].options
     }
     
+    init(userService: UserServiceProtocol = UserService()) {
+        self.userService = userService
+    }
+    
     func send(action: Action)  {
         switch action {
         case .selectOption(let index):
@@ -41,6 +52,17 @@ final class CreateChallengeViewModel: ObservableObject{
             clearSelectedOptions()
             dropdowns[selectedDropdownIndex].options[index].isSelected = true
             clearSelectedDropdown()
+        case .createChallenge:
+            currentUserId().sink { completion in
+                switch completion{
+                case let .failure(error):
+                    print(error.localizedDescription)
+                case .finished:
+                    print("completed")
+                }
+            } receiveValue: { userId in
+                print(userId)
+            }.store(in: &cancellables)
         }
     }
     
@@ -58,6 +80,21 @@ final class CreateChallengeViewModel: ObservableObject{
             return
         }
         dropdowns[selectedDropdownIndex].isSelected = false
+    }
+    
+    private func currentUserId() -> AnyPublisher<UserId, Error> {
+        return userService.currentUser().flatMap { user -> AnyPublisher<UserId, Error> in
+            if let userId = user?.uid {
+                return Just(userId)
+                    .setFailureType(to: Error.self)
+                    .eraseToAnyPublisher()
+            }else{
+                return self.userService
+                    .signInAnonymously()
+                    .map{$0.uid}
+                    .eraseToAnyPublisher()
+            }
+        }.eraseToAnyPublisher()
     }
 }
 
