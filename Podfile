@@ -8,6 +8,8 @@ target 'Increment' do
   # Pods for Increment
 pod 'Firebase/Analytics'
 pod 'Firebase/Auth'
+pod 'FirebaseFirestore'
+pod 'FirebaseFirestoreSwift'
 
   target 'IncrementTests' do
     inherit! :search_paths
