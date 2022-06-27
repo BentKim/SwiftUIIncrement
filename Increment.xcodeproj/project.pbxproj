@@ -24,6 +24,7 @@
 		3AD987B7285A3E8800C9C2DC /* DropdownItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD987B6285A3E8800C9C2DC /* DropdownItemProtocol.swift */; };
 		3AD987CB285E04E000C9C2DC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3AD987CA285E04E000C9C2DC /* GoogleService-Info.plist */; };
 		3AD987CE285E0E1400C9C2DC /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD987CD285E0E1400C9C2DC /* UserService.swift */; };
+		3ADFBFC92869F43700C2D3D4 /* IncrementError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADFBFC82869F43700C2D3D4 /* IncrementError.swift */; };
 		3AFBD7AF286882AD00E94044 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFBD7AE286882AD00E94044 /* Challenge.swift */; };
 		3AFBD7B12868833B00E94044 /* ChallengeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFBD7B02868833B00E94044 /* ChallengeService.swift */; };
 		4D68548DFF742E7B2AC7A3A7 /* Pods_Increment_IncrementUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF23EDA4625A40BB1DB43DB3 /* Pods_Increment_IncrementUITests.framework */; };
@@ -69,6 +70,7 @@
 		3AD987B6285A3E8800C9C2DC /* DropdownItemProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownItemProtocol.swift; sourceTree = "<group>"; };
 		3AD987CA285E04E000C9C2DC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3AD987CD285E0E1400C9C2DC /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		3ADFBFC82869F43700C2D3D4 /* IncrementError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncrementError.swift; sourceTree = "<group>"; };
 		3AFBD7AE286882AD00E94044 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		3AFBD7B02868833B00E94044 /* ChallengeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeService.swift; sourceTree = "<group>"; };
 		5AC95695A1C752CBEB77A3CA /* Pods-Increment-IncrementUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Increment-IncrementUITests.release.xcconfig"; path = "Target Support Files/Pods-Increment-IncrementUITests/Pods-Increment-IncrementUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				3A09938E2858D10D00D4A6B0 /* CreateView.swift */,
 				3A0993902858D19000D4A6B0 /* DropdownView.swift */,
 				3A0993922858EA6400D4A6B0 /* RemindView.swift */,
+				3ADFBFC82869F43700C2D3D4 /* IncrementError.swift */,
 			);
 			path = Increment;
 			sourceTree = "<group>";
@@ -475,6 +478,7 @@
 				3AFBD7B12868833B00E94044 /* ChallengeService.swift in Sources */,
 				3A09938F2858D10D00D4A6B0 /* CreateView.swift in Sources */,
 				3A0993912858D19000D4A6B0 /* DropdownView.swift in Sources */,
+				3ADFBFC92869F43700C2D3D4 /* IncrementError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
